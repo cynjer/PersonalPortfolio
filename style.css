@@ -1,0 +1,1028 @@
+
+/* =========================================
+   CYNTHIA'S PORTFOLIO
+   Dark Tech + Purple Glow
+   Fonts: Space Grotesk + Inter
+========================================= */
+
+
+/* GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+/* 1. COLOUR VARIABLES */
+
+:root {
+    --bg: #0B0A14;
+    --surface: #151222;
+    --surface-light: #1D1830;
+
+    --purple: #8B5CF6;
+    --purple-light: #C084FC;
+    --purple-dark: #6D28D9;
+
+    --text: #F5F3FF;
+    --muted: #B8B2CA;
+
+    --border: rgba(167, 139, 250, 0.2);
+    --glow: rgba(139, 92, 246, 0.18);
+}
+
+
+/* 2. GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+::selection {
+    background: var(--purple);
+    color: white;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--purple-light);
+    outline-offset: 4px;
+}
+
+
+/* 3. NAVIGATION */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(11, 10, 20, 0.92);
+    backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    color: var(--text);
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--purple-light);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--purple-light);
+}
+
+
+/* 4. HERO SECTION */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    max-width: 1600px;
+    min-height: 690px;
+    margin: 0 auto;
+    padding: 100px 9%;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+
+    background:
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(139, 92, 246, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #100D20,
+            #0B0A14 70%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label,
+.section-label {
+    color: var(--purple-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 20px 0 12px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.contact-panel h2 span {
+    background: linear-gradient(
+        120deg,
+        #C084FC,
+        #8B5CF6,
+        #E9D5FF
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    color: var(--purple-light);
+    font-size: clamp(20px, 2vw, 25px);
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 550px;
+    margin-bottom: 26px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 23px;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        120deg,
+        var(--purple),
+        var(--purple-dark)
+    );
+
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    border: 1px solid rgba(192, 132, 252, 0.35);
+
+    box-shadow: 0 0 24px rgba(139, 92, 246, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.hero-tags span,
+.interest-tags span,
+.project-tech span {
+    padding: 6px 11px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: rgba(139, 92, 246, 0.07);
+    color: var(--purple-light);
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+/* 5. HERO TECH VISUAL */
+
+.hero-visual {
+    min-width: 0;
+    min-height: 400px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glow-orb {
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        rgba(192, 132, 252, 0.8),
+        rgba(109, 40, 217, 0.3)
+    );
+
+    filter: blur(65px);
+    opacity: 0.65;
+}
+
+.tech-panel {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 430px;
+
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    border-radius: 18px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        rgba(35, 27, 57, 0.96),
+        rgba(17, 14, 29, 0.98)
+    );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(139, 92, 246, 0.1);
+
+    transform: rotate(1deg);
+    transition: transform 0.3s ease;
+}
+
+.tech-panel:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.panel-top {
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.025);
+    border-bottom: 1px solid var(--border);
+}
+
+.window-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.window-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #A78BFA;
+}
+
+.window-dots span:first-child {
+    background: #F472B6;
+}
+
+.window-dots span:last-child {
+    background: #67E8F9;
+}
+
+.panel-top p {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.panel-content {
+    padding: 28px;
+}
+
+.code-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(139, 92, 246, 0.15);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    color: var(--purple-light);
+    font-family: monospace;
+    font-size: 23px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+.panel-label {
+    color: var(--purple-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.tech-panel h3 {
+    font-size: clamp(20px, 2vw, 25px);
+    line-height: 1.45;
+    margin: 0;
+}
+
+.gradient-text {
+    color: var(--purple-light);
+}
+
+.tech-line {
+    height: 1px;
+    background: var(--border);
+    margin: 25px 0 15px;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(167, 139, 250, 0.1);
+
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.skill-dot,
+.status-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+
+    background: #C084FC;
+    box-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
+}
+
+.panel-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    margin-top: 24px;
+    color: #9586B8;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.floating-badge {
+    position: absolute;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    background: rgba(24, 19, 40, 0.94);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    color: var(--text);
+    font-size: 11px;
+}
+
+.badge-one {
+    top: 30px;
+    right: -12px;
+}
+
+.badge-two {
+    bottom: 25px;
+    left: -15px;
+}
+
+.badge-symbol {
+    color: var(--purple-light);
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* 6. GENERAL CONTENT SECTIONS */
+
+.section {
+    padding: 100px 9%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.contact-panel h2 {
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.about-intro {
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.about-intro p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* 7. ABOUT CARDS */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    min-width: 0;
+    padding: 27px;
+
+    background: linear-gradient(
+        145deg,
+        var(--surface-light),
+        var(--surface)
+    );
+
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(192, 132, 252, 0.55);
+}
+
+.card-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(139, 92, 246, 0.13);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    color: var(--purple-light);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+
+    margin-bottom: 22px;
+}
+
+.info-card h3 {
+    font-size: 19px;
+    margin-bottom: 14px;
+}
+
+.info-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.info-card .card-highlight {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.info-card .card-muted {
+    font-size: 12px;
+}
+
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.interest-tags span {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+
+/* 8. PROJECT SECTION */
+
+.projects-section {
+    background: #0E0C19;
+    max-width: none;
+    border-top: 1px solid rgba(167, 139, 250, 0.08);
+    border-bottom: 1px solid rgba(167, 139, 250, 0.08);
+}
+
+.projects-section > * {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects-section .section-heading {
+    margin-bottom: 35px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    min-width: 0;
+    padding: 28px;
+
+    background: linear-gradient(
+        145deg,
+        #1E1930,
+        #141120
+    );
+
+    border: 1px solid var(--border);
+    border-radius: 17px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(192, 132, 252, 0.6);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(139, 92, 246, 0.08);
+}
+
+.project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.project-number,
+.project-category {
+    color: var(--purple-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.project-symbol {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(139, 92, 246, 0.13);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    color: var(--purple-light);
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 10px 0 14px;
+    overflow-wrap: anywhere;
+}
+
+.project-card > p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.project-tech span {
+    font-size: 10px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.project-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding-top: 17px;
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.project-status .status-dot {
+    background: #A78BFA;
+}
+
+.projects-note {
+    color: #9289A7;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 28px;
+}
+
+
+/* 9. CONTACT SECTION */
+
+.contact-section {
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(139, 92, 246, 0.12),
+            transparent 60%
+        );
+}
+
+.contact-panel {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 55px 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        var(--surface-light),
+        var(--surface)
+    );
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.18);
+}
+
+.contact-panel > p:not(.section-label) {
+    max-width: 480px;
+    margin: 0 auto 20px;
+
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* 10. FOOTER */
+
+.site-footer {
+    padding: 25px 7%;
+    text-align: center;
+
+    background: #08070E;
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* 11. TABLET RESPONSIVENESS */
+
+@media (max-width: 950px) {
+
+    .hero {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 30px;
+        padding: 80px 6%;
+    }
+
+    .navbar {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tech-panel {
+        max-width: 380px;
+    }
+
+    .badge-one {
+        right: -5px;
+    }
+
+    .badge-two {
+        left: -5px;
+    }
+}
+
+
+/* 12. MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 75px 7% 65px;
+
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 10vw, 55px);
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-visual {
+        min-height: 360px;
+        margin: 0 5px;
+    }
+
+    .tech-panel {
+        max-width: 100%;
+        transform: none;
+    }
+
+    .tech-panel:hover {
+        transform: translateY(-3px);
+    }
+
+    .panel-content {
+        padding: 22px;
+    }
+
+    .floating-badge {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .badge-one {
+        top: 5px;
+        right: -5px;
+    }
+
+    .badge-two {
+        bottom: 0;
+        left: -5px;
+    }
+
+    .section {
+        padding: 70px 7%;
+    }
+
+    .section-heading h2,
+    .contact-panel h2 {
+        font-size: 34px;
+    }
+
+    .about-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card,
+    .project-card {
+        padding: 23px;
+    }
+
+    .contact-panel {
+        padding: 40px 20px;
+    }
+}
+
+
+/* 13. SMALL MOBILE SCREENS */
+
+@media (max-width: 380px) {
+
+    .nav-links {
+        gap: 8px 13px;
+    }
+
+    .hero-label,
+    .section-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .panel-content {
+        padding: 18px;
+    }
+
+    .skill-row {
+        font-size: 11px;
+    }
+}
+
+
+/* 14. REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* PURPLE SPARKLING STARS */
+
+.hero-visual {
+    overflow: visible;
+}
+
+.sparkle {
+    position: absolute;
+    z-index: 3;
+    color: #C084FC;
+    font-size: 64px;
+    line-height: 1;
+    text-shadow:
+        0 0 10px rgba(192, 132, 252, 0.9),
+        0 0 25px rgba(139, 92, 246, 0.7);
+    pointer-events: none;
+}
+
+.sparkle-top {
+    top: 3%;
+    right: -2%;
+}
+
+.sparkle-bottom {
+    bottom: 5%;
+    left: -2%;
+}
+
+@media (max-width: 650px) {
+    .sparkle {
+        font-size: 48px;
+    }
+
+    .sparkle-top {
+        top: 0;
+        right: -2%;
+    }
+
+    .sparkle-bottom {
+        bottom: 0;
+        left: -2%;
+    }
+}
+
+
+/* STEP 6.1: ACTIVE NAVIGATION LINK */
+
+.nav-links a.active {
+    color: var(--purple-light);
+    font-weight: 700;
+}
+
