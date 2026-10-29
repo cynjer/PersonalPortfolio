@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +25,8 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
+			
         </nav>
     </header>
 
@@ -45,7 +46,9 @@
                     Hi, I'm <span>Cynthia Jerry.</span>
                 </h1>
 
-                <h2>Network Computing Student</h2>
+                <h2 class="typing-heading">
+    		<span id="typingText">Network Computing Student</span><span class="typing-cursor">|</span>
+		</h2>
 
                 <p class="hero-description">
                     I am a Network Computing student at
@@ -226,14 +229,40 @@
             </div>
 
 
+<!-- PROJECT FILTER BUTTONS -->
+<div class="project-filters">
+    <button class="filter-btn active" data-filter="all">
+        All
+    </button>
+
+    <button class="filter-btn" data-filter="web development">
+        Web Development
+    </button>
+
+    <button class="filter-btn" data-filter="internet of things">
+        Internet of Things
+    </button>
+
+    <button class="filter-btn" data-filter="ui/ux design">
+        UI/UX Design
+    </button>
+
+    <button class="filter-btn" data-filter="wireless technology">
+        Wireless Technology
+    </button>
+
+    <button class="filter-btn" data-filter="fibre-optic infrastructure">
+        Fibre-Optic Infrastructure
+    </button>
+</div>
             
 <div class="projects-grid">
 
-    <!-- PROJECT 01: PERSONAL PORTFOLIO -->
+    <!-- PROJECT 1: PERSONAL PORTFOLIO -->
     <article class="project-card">
 
         <div class="project-top">
-            <span class="project-number">PROJECT 01</span>
+            <span class="project-number">PROJECT 1</span>
             <span class="project-symbol">&lt;/&gt;</span>
         </div>
 
@@ -241,64 +270,48 @@
 
         <h3>Personal Portfolio Website</h3>
 
-        <p>
-            A personal website developed using HTML and CSS
-            to showcase my background, education, skills
-            and academic projects.
-        </p>
-
-        <div class="project-tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-        </div>
 
         <div class="project-status">
             <span class="status-dot"></span>
             In Progress
         </div>
+	
+	<button class="project-details-btn" type="button">
+    		View Details →
+	</button>
 
     </article>
 
 
-    <!-- PROJECT 02: FYP -->
+    <!-- PROJECT 2: FYP -->
     <article class="project-card">
 
         <div class="project-top">
-            <span class="project-number">PROJECT 02</span>
+            <span class="project-number">PROJECT 2</span>
             <span class="project-symbol">⌁</span>
         </div>
 
         <div class="project-category">INTERNET OF THINGS</div>
 
-        <h3>Final Year Project - IoT-Based FTTx Optical Signal amd QoS Telemetry Testbed</h3>
-
-        <p>
-            A proposed testbed for monitoring optical signal
-            levels in an FTTx connection using optical sensing,
-            an ESP32 and a monitoring dashboard.
-        </p>
-
-        <div class="project-tech">
-            <span>ESP32</span>
-            <span>Optical Sensing</span>
-            <span>IoT</span>
-            <span>FTTx</span>
-        </div>
+        <h3>Final Year Project - IoT-Based FTTx Optical Signal and QoS Telemetry Testbed</h3>
 
         <div class="project-status">
             <span class="status-dot"></span>
             In Progress
         </div>
 
+	<button class="project-details-btn" type="button">
+    		View Details →
+	</button>
+
     </article>
 
 
-    <!-- PROJECT 03: ART MOBILE APP -->
+    <!-- PROJECT 3: ART MOBILE APP -->
     <article class="project-card">
 
         <div class="project-top">
-            <span class="project-number">PROJECT 03</span>
+            <span class="project-number">PROJECT 3</span>
             <span class="project-symbol">UI</span>
         </div>
 
@@ -306,33 +319,23 @@
 
         <h3>ART Mobile App Prototype</h3>
 
-        <p>
-            An academic group project involving the design
-            of a mobile app prototype for Kuching's
-            Autonomous Rapid Transit (ART) system.
-            The prototype explores journey planning,
-            ticket booking and travel information.
-        </p>
-
-        <div class="project-tech">
-            <span>Wireframing</span>
-            <span>Prototyping</span>
-            <span>Usability Testing</span>
-        </div>
-
         <div class="project-status">
             <span class="status-dot"></span>
             Academic Group Project
         </div>
 
+	<button class="project-details-btn" type="button">
+    		View Details →
+	</button>
+
     </article>
 
 
-    <!-- PROJECT 04: 5G TRAINING -->
+    <!-- PROJECT 4: 5G TRAINING -->
     <article class="project-card">
 
         <div class="project-top">
-            <span class="project-number">PROJECT 04</span>
+            <span class="project-number">PROJECT 4</span>
             <span class="project-symbol">5G</span>
         </div>
 
@@ -340,31 +343,23 @@
 
         <h3>5G Wireless Hardware Installation</h3>
 
-        <p>
-            Practical training at CENTEXS focused on
-            5G wireless infrastructure, telecommunications
-            hardware and hands-on installation activities.
-        </p>
-
-        <div class="project-tech">
-            <span>5G</span>
-            <span>Telecom Hardware</span>
-            <span>Wireless Infrastructure</span>
-        </div>
-
         <div class="project-status">
             <span class="status-dot"></span>
             Practical Training
         </div>
 
+	<button class="project-details-btn" type="button">
+    		View Details →
+	</button>
+
     </article>
 
 
-    <!-- PROJECT 05: FTTx TRAINING -->
+    <!-- PROJECT 5: FTTx TRAINING -->
     <article class="project-card">
 
         <div class="project-top">
-            <span class="project-number">PROJECT 05</span>
+            <span class="project-number">PROJECT 5</span>
             <span class="project-symbol">⌁</span>
         </div>
 
@@ -372,21 +367,14 @@
 
         <h3>FTTx Outside Plant Installation</h3>
 
-        <p>
-            Practical training at CENTEXS covering
-            FTTx outside plant infrastructure and
-            fibre-optic installation activities.
-        </p>
-
-        <div class="project-tech">
-            <span>FTTx</span>
-            <span>ODN</span>
-        </div>
-
         <div class="project-status">
             <span class="status-dot"></span>
             Practical Training
         </div>
+
+	<button class="project-details-btn" type="button">
+    		View Details →
+	</button>
 
     </article>
 
@@ -421,6 +409,34 @@
 
         </section>
 
+
+<!-- PROJECT DETAILS POPUP -->
+<div id="projectModal" class="project-modal"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="modalTitle"
+     aria-hidden="true">
+
+    <div class="modal-content">
+        <button id="closeModal" class="modal-close"
+                type="button" aria-label="Close project details">
+            &times;
+        </button>
+
+        <p class="section-label">PROJECT DETAILS</p>
+
+        <h2 id="modalTitle">Project Title</h2>
+
+        <p id="modalDescription">
+            Project description will appear here.
+        </p>
+
+        <div id="modalTech" class="project-tech"></div>
+    </div>
+
+</div>
+
+
     </main>
 
 
@@ -431,6 +447,10 @@
         </p>
     </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top">
+    ↑
+</button>
 
     <script src="script.js"></script>
 

@@ -1,4 +1,3 @@
-
 /* =========================================
    CYNTHIA'S PORTFOLIO
    Dark Tech + Purple Glow
@@ -27,6 +26,8 @@
 
     --border: rgba(167, 139, 250, 0.2);
     --glow: rgba(139, 92, 246, 0.18);
+
+
 }
 
 
@@ -1025,4 +1026,242 @@ a:focus-visible {
     color: var(--purple-light);
     font-weight: 700;
 }
+
+/* BACK TO TOP BUTTON */
+
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+
+    background: var(--purple);
+    color: white;
+    border: 1px solid var(--purple-light);
+    border-radius: 12px;
+
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background: var(--purple-dark);
+    box-shadow: 0 0 20px var(--glow);
+}
+
+#backToTop:focus-visible {
+    outline: 3px solid var(--purple-light);
+    outline-offset: 4px;
+}
+
+/* STEP 6.3: PROJECT FILTER BUTTONS */
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    padding: 9px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: var(--surface);
+    color: var(--muted);
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    color: var(--purple-light);
+    border-color: var(--purple-light);
+    background: rgba(139, 92, 246, 0.12);
+}
+
+.filter-btn.active {
+    color: white;
+    background: linear-gradient(
+        120deg,
+        var(--purple),
+        var(--purple-dark)
+    );
+    border-color: var(--purple-light);
+    box-shadow: 0 0 18px var(--glow);
+}
+
+.filter-btn:focus-visible {
+    outline: 3px solid var(--purple-light);
+    outline-offset: 3px;
+}
+
+
+/* STEP 6.4: TYPING ANIMATION */
+
+.typing-cursor {
+    display: inline-block;
+    margin-left: 3px;
+    color: var(--purple-light);
+    animation: cursorBlink 0.8s infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 49% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+
+/* STEP 6.5: PROJECT DETAILS BUTTON */
+
+.project-details-btn {
+    margin-top: 18px;
+    padding: 10px 16px;
+
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--purple-light);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-details-btn:hover {
+    background: var(--purple);
+    color: white;
+    border-color: var(--purple-light);
+    box-shadow: 0 0 18px var(--glow);
+    transform: translateY(-2px);
+}
+
+.project-details-btn:focus-visible {
+    outline: 3px solid var(--purple-light);
+    outline-offset: 3px;
+}
+
+
+/* STEP 6.5: PROJECT DETAILS POPUP */
+
+.project-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: rgba(5, 4, 12, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+.project-modal.show {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background: linear-gradient(
+        145deg,
+        var(--surface-light),
+        var(--surface)
+    );
+
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content h2 {
+    margin: 15px 35px 18px 0;
+    font-size: clamp(24px, 4vw, 32px);
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.modal-content > p:not(.section-label) {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+#modalTech {
+    margin-top: 22px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--purple-light);
+
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.modal-close:hover {
+    background: var(--purple);
+    color: white;
+}
+
+.modal-close:focus-visible {
+    outline: 3px solid var(--purple-light);
+    outline-offset: 3px;
+}
+
+@media (max-width: 500px) {
+    .modal-content {
+        padding: 28px 22px;
+    }
+}
+
+
+
+
 
